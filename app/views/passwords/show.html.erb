@@ -1,0 +1,22 @@
+<p>Your seed is <%= @seed %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <% letters.each do |letter| %>
+        <th><%= letter %></th>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <% letters.each do |row| %>
+      <tr>
+        <td><%= row %></td>
+        <% letters.each do |col| %>
+          <td id="<%= row + col %>"><%= random_letter %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
