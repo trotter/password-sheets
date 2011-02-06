@@ -1,4 +1,8 @@
 module PasswordsHelper
+  def cell_id(row, col)
+    "%02d%02d" % [row, col]
+  end
+
   def letters
     'A'..'Z'
   end
